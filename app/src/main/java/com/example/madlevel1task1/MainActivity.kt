@@ -36,8 +36,17 @@ class MainActivity : AppCompatActivity() {
       
     }
 
+
+    //String variableValue = imageName;
+    //iv.setImageResource(R.drawable.variableValue);
+
     private fun updateUI() {
 
+        var imageName = "dice"+currentThrow;
+        binding.ivDice.setImageResource((getResources().getIdentifier(imageName, "drawable", getPackageName()));
+
+            
+        /*
         when (currentThrow) {
             1 -> binding.ivDice.setImageResource(R.drawable.dice1)
             2 -> binding.ivDice.setImageResource(R.drawable.dice2)
@@ -46,6 +55,8 @@ class MainActivity : AppCompatActivity() {
             5 -> binding.ivDice.setImageResource(R.drawable.dice5)
             6 -> binding.ivDice.setImageResource(R.drawable.dice6)
         }
+
+         */
 
         binding.tvLastThrow.text = getString (R.string.last_throw, lastThrow)
 
